@@ -7,16 +7,16 @@ import Counter from './components/counter/counter.js';
 import NumbersList from './components/numbers-list/numbers-list.js';
 
 class App extends Component {
-  render() {
-    return (
+	render() {
+		return (
 			<Provider store={store}>
-	      <div className="App">
+				<div className="App">
 					<Counter />
 					<NumbersList />
-	      </div>
+				</div>
 			</Provider>
-    );
-  }
+		);
+	}
 }
 
 export default App;
