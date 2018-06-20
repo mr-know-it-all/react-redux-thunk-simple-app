@@ -23,7 +23,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return bindActionCreators({
 		addNumber, computeSecretNumber
-	}, dispatch);;
+	}, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(NumbersList);
