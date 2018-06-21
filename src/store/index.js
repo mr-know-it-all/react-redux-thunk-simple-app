@@ -23,7 +23,18 @@ const numbersList = (state = [], action) => {
 	}
 }
 
-const rootReducer = combineReducers({count, numbersList});
+const pendingData = (state = {}, action) => {
+	switch(action.type) {
+		case 'START_SECRET_NUMBER_COMP':
+			return {...state, secretNumber: true};
+		case 'END_SECRET_NUMBER_COMP':
+			return {...state, secretNumber: false};
+		default:
+			return state;
+	}
+}
+
+const rootReducer = combineReducers({count, numbersList, pendingData});
 const store = createStore(rootReducer, {}, applyMiddleware(ReduxThunk));
 
 export default store;
